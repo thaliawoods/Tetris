@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const StartBtn = document.querySelector('#start-button')
     const width = 10
 
-  //The Tetrominoes
+  //create the Tetrominoes
   const lTetromino = [
     [1, width+1, width*2+1, 2],
     [width, width+1, width+2, width*2+2],
@@ -44,9 +44,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
 
   let currentPosition = 4
+  let currentRotation = 0
 
-  let current = theTetrominoes[0][0]
+// random selection of tetrominoes
+  let random = Math.floor(Math.random()*theTetrominoes.length)
+//   console.log(random)
+  let current = theTetrominoes[random][0]
 
-  console.log(theTetrominoes)
+//   console.log(theTetrominoes)
+
+
+// draw the tetromino
+function draw() {
+    current.forEach(index => {
+        squares[currentPosition + index].classList.add('tetromino')
+    })
+}
+
+draw()
+
+// undraw
+function undraw() {
+    current.forEach(index => {
+        squares[currentPosition + index].classList.remove('tetromino')
+    })
+}
 
 })
