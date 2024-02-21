@@ -119,6 +119,7 @@ function freeze() {
     draw()
     displayShape()
     addScore()
+    gameOver()
     }
 }
 
@@ -218,6 +219,7 @@ function addScore() {
             scoreDisplay.innerHTML = score
             row.forEach(index => {
                 squares[index].classList.remove('taken')
+                squares[index].classList.remove('tetromino')
             })
             const squaresRemoved = squares.splice(i, width)
             squares = squaresRemoved.concat(squares)
@@ -227,6 +229,11 @@ function addScore() {
 }
 
 
-
+// game over
+function gameOver() {
+    if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+        scoreDisplay.innerHTML = 'Game Over'
+        clearInterval(timerId)
+    }}
 
 }) 
