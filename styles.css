@@ -1,5 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.main-container {
+    border: 3px solid #000;
+    padding: 20px;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+}
+
+.score-container {
+    background-color: #ffffff;
+    border: 2px solid #000;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#start-button {
+    background-color: #666b7f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#start-button i {
+    font-size: 20px;
+}
+
+.game-container {
+    display: inline-block;
+    border: 3px solid #000;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
 .container {
     display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .grid {
@@ -16,7 +72,7 @@
 }
 
 .tetromino {
-    background-color: rgb(115, 249, 115);
+    background-color: rgb(59, 64, 112);
 }
 
 .mini-grid {
